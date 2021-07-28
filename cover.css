@@ -1,0 +1,12 @@
+nav{background-color: #fc4747;}
+.navbar{padding:1rem}
+.navbar-toggler{float:right;}
+
+
+/* Navbar Collapse Styles To Stack Items At Mobile Widths*/
+@media(max-width:61.9em) {
+  .navbar .navbar-brand {float:none;display:inline-block;}
+  .navbar .navbar-nav>.nav-item { float: none; margin-left: .1rem;}
+  .navbar .navbar-nav {float:none !important;}
+  .nav-item{width:100%;text-align:left;} 
+}

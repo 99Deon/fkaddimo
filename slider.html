@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
+    <title>Document</title>
+    <style>
+ .splide {
+  padding: 20px 0;
+}
+
+// Generic Slide
+.splide__slide {
+  img {
+    display: block;
+    width: 100%;
+    border-radius: 8px;
+    transition: transform 400ms;
+    transform: scale(0.9);
+    transform-origin: center center;
+  }
+}
+
+// Active Slide
+.splide__slide.is-active {
+  img {
+    transform: scale(1);
+  }
+}
+
+// Arrow Tweaks for Accessibility
+.splide .splide__arrow {
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  transform: none;
+  border-radius: unset;
+  width: 50px;
+  opacity: 0.9;
+ 
+}
+.splide__arrow.splide__arrow--prev {
+  left: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+.splide__arrow.splide__arrow--next {
+  right: 0;
+  background: linear-gradient(
+    270deg,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+ 
+body {
+  margin: 0;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  font-family: Arial;
+}
+a {
+  color: #fff;
+  padding: 4px 8px;
+}
+section {
+  max-width: 700px;
+  margin: 0 auto;
+}
+.left {
+  text-align: left;
+}
+
+    </style>
+</head>
+<body>
+
+    <div id="splide" class="splide">
+        <div class="splide__track">
+          <ul class="splide__list">
+            <li class="splide__slide"><img src="https://brandontran.com/images/cardboard-castle-10.jpg"></li>
+            <li class="splide__slide"><img src="https://brandontran.com/images/cardboard-castle-5.jpg"></li>
+            <li class="splide__slide"><img src="https://brandontran.com/images/cardboard-castle-4.jpg"></li>
+            <li class="splide__slide"><img src="https://brandontran.com/images/cardboard-castle-3.jpg"></li>
+          </ul>
+        </div>
+      </div>
+
+    <script>
+    document.addEventListener( 'DOMContentLoaded', function () {
+        new Splide('#splide', {
+          type: 'loop',
+          perPage: 1, 
+          autoplay: true,
+          interval: 8000, 
+          width: '100%',
+          updateOnMove: true,
+          pagination: true,
+         
+          breakpoints: {
+            1440: {
+              perPage: 1,
+              padding: '30%'
+            }
+          }
+        }).mount();
+      });
+      
+        </script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@2.4.21/dist/js/splide.min.js"></script>
+
+
+</body>
+</html>
